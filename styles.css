@@ -1,0 +1,167 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #b22222;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Hero with dark overlay */
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1579547621706-1a9c79d5ffa0') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.tagline {
+  font-size: 1.4em;
+  font-style: italic;
+}
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #b22222;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.cta-btn:hover {
+  background: #800000;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #b22222;
+  font-size: 2em;
+}
+.about p {
+  margin-bottom: 15px;
+}
+.awards ul {
+  list-style: none;
+}
+.awards li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.service h3 {
+  color: #444;
+  margin-bottom: 10px;
+}
+.testimonials blockquote {
+  margin-bottom: 30px;
+  font-style: italic;
+  border-left: 4px solid #b22222;
+  padding-left: 15px;
+}
+.testimonials cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 🔥 Fire Safety Tips */
+.safety-tips {
+  background-color: #fff7f5;
+  padding: 60px 0;
+}
+.tips-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.tips-list li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.tips-list strong {
+  color: #b22222;
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact button {
+  padding: 12px;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact button:hover {
+  background-color: #800000;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  .tagline {
+    font-size: 1.2em;
+  }
+}
